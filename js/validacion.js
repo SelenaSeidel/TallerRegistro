@@ -25,7 +25,9 @@ document.addEventListener("DomContentLoaded"), function() {
     let boton = document.getelementById("regBtn");
     boton.addEventListener("click", function(){
         let pass1= document.getElementById("password1")
-         }else {
+        if (password1.minlength ){   
+            showAlertSuccess();
+            }else {
             showAlertError()
         }
     }
