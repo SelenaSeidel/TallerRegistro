@@ -9,30 +9,19 @@ function showAlertError() {
 
 //chequeo contraseña
 document.addEventListener("DOMContentLoaded", function () {
-    let boton = document.getElementById("regBtn");  
-    boton.addEventListener("click", function(){         //al hacer click 
-        let pass1=document.getElementById("password1");
-        let pass2=document.getElementById("password2");
-        if (pass1.value==pass2.value){   //compara contraseñas
-            showAlertSuccess();
-        }else{
-            showAlertError();
+    let boton = document.getElementById("regBtn");
+    boton.addEventListener("click", function () {  //al hacer click 
+        let pass1 = document.getElementById("password1")
+        let pass2 = document.getElementById("password2");
+
+        if (pass1.value.length < 6 && pass2.value.length < 6) {
+            showAlertError()
         }
-  })
-  });
-// contraseña min 6 caracteres
-document.addEventListener("DomContentLoaded", function() {
-    let boton = document.getelementById("regBtn");
-    let password1=document.getElementById("password1");
-    boton.addEventListener("click", function(){
-        let pass1= document.getElementById("password1")
-        if (password1.minlength < password1.value.length){   
+
+        if (pass1.value == pass2.value) {   //compara contraseñas
             showAlertSuccess();
-        }else {
+        } else {
             showAlertError();
         }
     })
-});
-
-
-    
+});    
