@@ -21,16 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   });
 // contraseña min 6 caracteres
-document.addEventListener("DomContentLoaded"), function() {
+document.addEventListener("DomContentLoaded", function() {
     let boton = document.getelementById("regBtn");
+    let password1=document.getElementById("password1");
     boton.addEventListener("click", function(){
         let pass1= document.getElementById("password1")
-        if (password1.minlength ){   
+        if (password1.minlength < password1.value.length){   
             showAlertSuccess();
-            }else {
-            showAlertError()
+        }else {
+            showAlertError();
         }
-    }
+    })
+});
 
 
     
